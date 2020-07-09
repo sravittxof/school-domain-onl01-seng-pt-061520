@@ -23,7 +23,7 @@ class School
   
   def sort
     @roster.collect do |key, value|
-      key[value].sort
+      key(value).sort
     end
   end
   
