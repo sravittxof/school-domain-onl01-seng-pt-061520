@@ -3,13 +3,11 @@
 class School
   def initialize(school)
     @school = school
+    @roster = {}
   end
   
   attr_accessor :roster
   
-  def roster
-    @roster = {}
-  end
   
   def add_student(name, grade)
     if @roster.keys.include?(grade) == false
