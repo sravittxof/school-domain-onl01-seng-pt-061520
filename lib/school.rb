@@ -6,7 +6,9 @@ class School
     @roster = {}
   end
   
-  attr_reader :roster
+  def roster
+    @roster
+  end
   
   
   def add_student(name, grade)
