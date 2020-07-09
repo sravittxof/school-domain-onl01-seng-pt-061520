@@ -5,7 +5,7 @@ class School
     @school = school
   end
   
-  
+  attr_accessor
   
   def add_student(name, grade)
     if @roster.keys.include?(grade) == false
