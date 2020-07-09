@@ -19,6 +19,6 @@ class School
   end
   
   def sort
-    @roster.collect do 
+    @roster.collect do |key, value
   
 end
