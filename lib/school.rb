@@ -1,8 +1,9 @@
 # code here!
+=begin
 class School
   def initialize(school)
     @school = school
-    roster = {}
+    @roster = {}
   end
   
   
@@ -21,6 +22,36 @@ class School
   
   def sort
     @roster.collect do |key, value|
+      value.sort
+    end
+  end
+  
+end
+
+=end
+
+class School
+  def initialize(school)
+    @school = school
+    roster = {}
+  end
+  
+  
+  def add_student(name, grade)
+    if roster.keys.include?(grade) == false
+      roster[grade] = []
+      roster[grade] << name
+    else
+      roster[grade] << name
+    end  
+  end
+  
+  def grade(grade)
+    roster[grade]
+  end
+  
+  def sort
+    roster.collect do |key, value|
       value.sort
     end
   end
